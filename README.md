@@ -1,62 +1,35 @@
-KNJO-IA
+# KNJO M — Prototipo de interfaz V0.1
 
-Asistente personal de inteligencia artificial para Android.
+## Propósito
+Primera forma funcional de la experiencia KNJO M: editor de flyers con plantillas reutilizables, vista previa, exportación PNG y panel de preparación para mejoras de imagen/video. El inventario queda previsto como una fase posterior.
 
-KNJO-IA es un proyecto independiente de KNJO Systems™ orientado a construir un asistente conversacional instalable en Android, con interacción por texto, voz y memoria personal controlada por el usuario.
+## Ejecutar
+Abre `index.html` en un navegador moderno. No requiere instalación ni servidor para la demostración básica.
 
-Estado del proyecto
+## Incluido
+- Editor de texto, marca, color, estilo y formato (9:16, 1:1, 16:9).
+- Tres presets visuales.
+- Carga local de imagen de producto para la vista previa.
+- Guardado y recuperación de plantillas mediante `localStorage`.
+- Exportación PNG de vista previa.
+- Interfaz de preparación para mejora de medios.
 
-Fase actual: Arquitectura definida; implementación pendiente.
+## Límites conocidos
+- No es una aplicación de producción.
+- La mejora real de imagen/video todavía no está implementada; el panel solo prepara la solicitud y no altera el archivo.
+- No hay backend, cuentas, base de datos, sincronización, cuotas ni historial central.
+- El exportador PNG es una primera aproximación: la tipografía y la composición exportada pueden diferir de la vista previa. Validar antes de uso comercial.
+- La fuente web es opcional; el navegador usará fuentes de respaldo si no hay conexión.
+- El símbolo KΩ del prototipo es provisional; reemplazar por el activo oficial autorizado antes de publicar.
+- No contiene secretos ni credenciales.
 
-Este repositorio inicia el desarrollo de KNJO-IA. Las funciones descritas a continuación son objetivos de diseño, no capacidades ya implementadas o verificadas.
+## Siguiente fase recomendada
+1. Pruebas de aceptación y revisión de accesibilidad/responsividad.
+2. Definir formatos de exportación y fidelidad del diseño.
+3. Seleccionar y validar motor de mejora de imagen/video, costos, límites y tratamiento de datos.
+4. Incorporar biblioteca persistente y backend solo cuando el flujo y requisitos estén aprobados.
+5. Agregar inventario como módulo independiente posterior, con modelo de datos propio.
 
-Objetivos
-
-- Aplicación Android nativa: Kotlin y Jetpack Compose.
-- Conversación por texto: interfaz de chat.
-- Inteligencia artificial: integración inicial prevista con Google Gemini mediante un backend seguro.
-- Interacción por voz: entrada por voz y respuestas habladas.
-- Conversación continua por voz: modo opcional, visible y controlado por el usuario.
-- Memoria controlada: guardar información únicamente con autorización explícita, con opciones para consultar, editar y eliminar los datos guardados.
-- Privacidad y seguridad: no incluir claves privadas de proveedores de IA dentro de la aplicación Android.
-- Arquitectura ampliable: permitir incorporar otros proveedores en el futuro.
-
-Primera versión prevista
-
-La primera entrega será una aplicación Android con una conversación simulada localmente, identificada claramente como SIMULADO.
-
-Esta versión inicial no realizará llamadas a servicios de IA, no requerirá conexión a Internet y no implementará todavía voz ni memoria persistente.
-
-Arquitectura prevista
-
-- "android/" — aplicación Android.
-- "backend/" — servicio intermediario para proveedores de IA, en una fase posterior.
-- "docs/" — especificaciones, decisiones y documentación técnica.
-- "contracts/" — contratos de API cuando se implemente el backend.
-- "tests/" — pruebas automatizadas.
-
-La estructura anterior es propuesta y podrá ajustarse durante la implementación, documentando los cambios.
-
-Principios de desarrollo
-
-1. Evidencia antes que suposiciones.
-2. Verificación antes que declaraciones de éxito.
-3. Conservar intactos los archivos originales de referencia.
-4. Separar claramente lo diseñado, implementado, probado y validado.
-5. Proteger las credenciales y los datos personales.
-6. No desplegar servicios ni generar costes sin autorización explícita.
-7. No modificar proyectos externos ni recursos de KNJO Systems™ sin autorización.
-
-Alcance y separación
-
-KNJO-IA será un proyecto independiente. El prototipo KNJO-M podrá utilizarse como referencia visual cuando corresponda, pero no se considerará una base técnica Android ni se modificará su archivo original.
-
-Este proyecto tampoco autoriza cambios en KNJO Core, Netlify o servicios de Cloudflare.
-
-Licencia
-
-Sin licencia asignada por el momento. El código no debe considerarse de uso libre hasta que se establezca una licencia explícita.
-
-Nota de estado
-
-La existencia de este documento no significa que la aplicación, el backend, la integración con Gemini, la memoria o la voz estén implementados. Cada función se marcará como implementada, probada o validada únicamente cuando exista evidencia verificable.
+## Estado de evidencia
+- Implementado en este prototipo: interfaz y comportamientos locales descritos arriba.
+- No implementado: mejora real con IA, procesamiento de video, sincronización multi-dispositivo, autenticación, backend y módulo de inventario.
